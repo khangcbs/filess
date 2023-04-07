@@ -1,0 +1,9 @@
+[Unit]
+Description=Run script on startup
+
+[Service]
+Type=simple
+ExecStart=/usr/bin/run
+
+[Install]
+WantedBy=multi-user.target
